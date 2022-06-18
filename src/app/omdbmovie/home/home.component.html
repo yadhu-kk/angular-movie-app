@@ -1,0 +1,63 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="main-div">
+<style>
+    input{
+      width: 40%;
+      height: 40px;
+      display:inline-flex;
+      background: #f1f1f1;
+      right: auto;
+      border-color: green;
+      border-radius: .5rem;
+      
+      
+      
+    }
+    
+    img{
+      height: 300px;
+      width: 300px;
+    }
+    ul{
+      align-items:right;
+      list-style-type: none;
+      text-align: left;
+    }
+    h1{
+      display: inline;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: x-large;
+      padding-right: 80px;
+      padding-left: 80px;
+      
+    }
+    
+    
+  </style>
+  
+  
+      <div><h1>OMDB Movie Search    </h1>
+      <input type="text" [(ngModel)]="movieName" placeholder="Movie Name"/>
+      <button type="submit" (click)="onClick()">Search</button> 
+      <h5>What is Lorem Ipsum?</h5>
+      <p style="background-image: url(https://pngtree.com/so/movie-logo)">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      
+      <div class="card-wrap">
+      <div class="card" *ngFor="let movie of movieData">
+        <div><img src="{{movie.Poster}}" alt="{{movie.Title}}">
+        <ul style="color: red;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifS; font-style:oblique;">
+          <li>Title:{{movie.Title}} </li>
+          <li>Year:{{movie.Year}}</li>
+          <li>imdbID:{{movie.imdbID}}</li>
+          <li>Type:{{movie.Type}}</li>
+         
+        
+          
+          
+        </ul>
+      </div></div></div></div><br><br><br><br><br><br>
+      
+    <div><h3>hello</h3></div>
+    
